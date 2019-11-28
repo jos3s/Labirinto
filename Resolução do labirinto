@@ -1,1 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+int** gerar_matriz(int m,int n){
+
+    int i;
+    int **mat = (int**)malloc(m*sizeof(int*));
+    if(mat == NULL){
+        puts("Sem memoria suficiente!\n");
+        system("pause");
+        exit(1);
+    }
+    for(i=0;i<m;i++){
+        mat[i] = (int*)malloc(n*sizeof(int));
+        if(mat[i] == NULL){
+            puts("Sem memoria suficiente!\n");
+            system("pause");
+            exit(1);
+        }
+    }
+    return mat;
+
+}
+
+void imprimir_matriz(int **mat,int m,int n){
+
+    int i,j;
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++)
+            printf("%c",mat[i][j]);
+        puts("");
+    }
+
+}
+
+void apagar_matriz(int **mat,int m,int n){
+
+    int i;
+    for(i=0;i<m;i++)
+        free(mat[i]);
+    free(mat);
+
+}
+
+void buscar_labirinto(int **mat,int m,int n){
+
+    int i,j;
+    char temp;
+    FILE *arq = fopen("Labirinto.txt","r");
+    for(i=0;i<m;i++){
+        for(j=0;j<=n;j++){
+            temp = fgetc(arq);
+            if(temp == '+')
+                mat[i][j] = 43;
+            else if(temp == '-')
+                mat[i][j] = 45;
+            else if(temp == '¦')
+                mat[i][j] = 179;
+            else
+                mat[i][j] = 0;
+        }
+    }
+    fclose(arq);
+
+}
+
+int main(){
+
+    int m,n;
+    FILE *arq = fopen("Lab_tamanho.txt","r");
+    fscanf(arq,"%d %d",&m,&n);
+    fclose(arq);
+    int **mat = gerar_matriz(m,n);
+    buscar_labirinto(mat,m,n);
+    imprimir_matriz(mat,m,n);
+
+return 0;
+}
