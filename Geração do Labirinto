@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+int tc,tl;
+
 int** gerar_matriz(int m,int n){
 
     int i;
@@ -108,9 +110,19 @@ void gerar_labirinto(int **mat,int m,int n,int il,int ic){
     if(m-il> 4 && n-ic > 4){
         if((m-il) > (n-ic)){
             int linha = parede_horizontal(mat,m,n,il,ic);
+            animacao(mat);
+            for(int i=0;i<10000;i++){
+
+            }
+            system("cls");
             gerar_labirinto(mat,linha+1,n,il,ic);
             gerar_labirinto(mat,m,n,linha,ic);
         }else{
+            animacao(mat);
+            for(int i=0;i<10000;i++){
+
+            }
+            system("cls");
             int coluna = parede_vertical(mat,m,n,il,ic);
             gerar_labirinto(mat,m,coluna+1,il,ic);
             gerar_labirinto(mat,m,n,il,coluna);
@@ -184,6 +196,7 @@ void arquivar_labirinto(int **mat,int m,int n){
         fprintf(arq,"\n");
     }
     fclose(arq);
+
 }
 
 void arquivar_tamanho(int m,int n){
@@ -199,6 +212,20 @@ void arquivar_tamanho(int m,int n){
 
 }
 
+void animacao(int** mat){
+    int i,j;
+    for(i=0;i<tl;i++){
+        for(j=0;j<tc;j++){
+            if(mat[i][j]==179 ||mat[i][j]==43||mat[i][j]==45)
+                printf("%c",219);
+            else
+                printf("%c",mat[i][j]);
+       }
+        puts("");
+    }
+
+}
+
 int main(){
 
     srand(time(NULL));
@@ -210,9 +237,11 @@ int main(){
     puts("");
     m = (m*2) + 1;
     n = (n*2) + 1;
+    tl=m;
+    tc=n;
     int **mat = gerar_matriz(m,n);
     labirinto(mat,m,n);
-    imprimir_matriz(mat,m,n);
+    animacao(mat);
     arquivar_labirinto(mat,m,n);
     arquivar_tamanho(m,n);
     printf("\nO labirinto gerado foi armazenado em um arquivo de texto chamado 'Labirinto.txt', localizado na pasta do programa.\n");
