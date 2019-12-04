@@ -4,7 +4,6 @@
 int tl,tc;
 
 int** gerar_matriz(int m,int n){
-
     int i;
     int **mat = (int**)malloc(m*sizeof(int*));
     if(mat == NULL){
@@ -21,31 +20,25 @@ int** gerar_matriz(int m,int n){
         }
     }
     return mat;
-
 }
 
 void imprimir_matriz(int **mat,int m,int n){
-
     int i,j;
     for(i=0;i<m;i++){
         for(j=0;j<n;j++)
             printf("%c",mat[i][j]);
         puts("");
     }
-
 }
 
 void apagar_matriz(int **mat,int m,int n){
-
     int i;
     for(i=0;i<m;i++)
         free(mat[i]);
     free(mat);
-
 }
 
 void buscar_labirinto(int **mat,int m,int n){
-
     int i,j;
     char temp;
     FILE *arq = fopen("Labirinto.txt","r");
@@ -63,11 +56,9 @@ void buscar_labirinto(int **mat,int m,int n){
         }
     }
     fclose(arq);
-
 }
 
 void animacao(int **mat,int m,int n){
-
     int i,j;
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
@@ -82,11 +73,9 @@ void animacao(int **mat,int m,int n){
        }
         puts("");
     }
-
 }
 
 void caminho_labirinto(int **mat,int m,int n){
-
     int i = 1,j = 1;
     mat[1][0] = 35;
     while(i != m-2 || j != n-1){
@@ -118,11 +107,9 @@ void caminho_labirinto(int **mat,int m,int n){
         system("cls");
     }
     mat[i][j] = 35;
-
 }
 
 void arquivar_labirinto_resolvido(int **mat,int m,int n){
-
     int i,j;
     FILE *arq = fopen("Labirinto.txt","a+");
     fprintf(arq,"\n");
@@ -136,7 +123,6 @@ void arquivar_labirinto_resolvido(int **mat,int m,int n){
         fprintf(arq,"\n");
     }
     fclose(arq);
-
 }
 
 int main(){

@@ -11,4 +11,4 @@ Um código que gera um labirinto aleatório e com saída que é salvo em um arqu
 
 
 ### Pré-requisitos
- Utilizamos o Code::Blocks como IDE de desenvolvimento em conjunto com a linguagem C, além de bilbiotecas como a stdlib, a stdio e a time disponível na IDE.
+ Utilizamos o Code::Blocks como IDE de desenvolvimento em conjunto com a linguagem C, além de bilbiotecas como a stdlib.h, a stdio.h e a time.h disponível na IDE.
