@@ -1,11 +1,5 @@
 # Labirinto
 
-## Integrantes:
-
-- Jeferson Ribeiro
-- Isaac Freitas
-- José Ulisses
-
 ## Objetivo 
 Gerar dois códigos em C com o objetivo de gerar um labirinto aleatório e um caminho de saída, que vão ser salvos dois arquivos:
 
@@ -14,3 +8,9 @@ Gerar dois códigos em C com o objetivo de gerar um labirinto aleatório e um ca
 
 ## Pré-requisitos
  Utilizamos o Code::Blocks como IDE de desenvolvimento em conjunto com a linguagem C, além de bilbiotecas como a stdlib.h, a stdio.h e a time.h disponível na IDE.
+
+## Integrantes:
+
+- Jeferson Ribeiro
+- Isaac Freitas
+- José Ulisses
