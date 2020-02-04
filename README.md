@@ -1,4 +1,6 @@
 # Labirinto
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjos3s%2FLabirinto.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjos3s%2FLabirinto?ref=badge_shield)
+
 
 ## Objetivo 
 Gerar dois códigos em C com o objetivo de gerar um labirinto aleatório e um caminho de saída, que vão ser salvos dois arquivos:
@@ -14,3 +16,7 @@ Gerar dois códigos em C com o objetivo de gerar um labirinto aleatório e um ca
 - Jeferson Ribeiro
 - Isaac Freitas
 - José Ulisses
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjos3s%2FLabirinto.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjos3s%2FLabirinto?ref=badge_large)
