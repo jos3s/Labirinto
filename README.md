@@ -11,7 +11,7 @@ Gerar dois códigos em C com o objetivo de gerar um labirinto aleatório e um ca
 
 ## Integrantes:
 
-![#2508D5](https://placehold.it/15/2508D5/000000?text=+) Jeferson Ribeiro
+![#2508D5](https://placehold.it/15/2508D5/000000?text=+) [Jeferson Ribeiro](https://github.com/Woozymandias)
 
 ![#0883D5](https://placehold.it/15/0883D5/000000?text=+) Isaac Freitas
 
